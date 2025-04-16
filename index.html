@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Booth's Algorithm (4-bit & 8-bit)</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>Booth's Algorithm Visualizer</h1>
+    
+    <label for="bit-size">Bit Size:</label>
+    <select id="bit-size">
+      <option value="4">4-bit</option>
+      <option value="8">8-bit</option>
+    </select>
+
+    <label for="multiplicand">Multiplicand (Binary):</label>
+    <input type="text" id="multiplicand" placeholder="e.g., 1101 for -3"/>
+
+    <label for="multiplier">Multiplier (Binary):</label>
+    <input type="text" id="multiplier" placeholder="e.g., 1011 for -5"/>
+
+    <button onclick="runBoothsAlgorithm()">Run Booth's Algorithm</button>
+
+    <h2>Steps:</h2>
+    <table id="output-table">
+      <thead>
+        <tr>
+          <th>Step</th>
+          <th>AC</th>
+          <th>Q</th>
+          <th>Q-1</th>
+          <th>SC</th>
+          <th>Operation</th>
+        </tr>
+      </thead>
+      <tbody id="output-body"></tbody>
+    </table>
+
+    <h2>Final Result:</h2>
+    <p id="final-result"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
